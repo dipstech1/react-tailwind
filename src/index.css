@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    input{
+        @apply border-2 border-gray-400 rounded-md w-full h-14 outline-none p-1 placeholder:text-slate-400
+    }
+
+    input[type='text'], input[type='password'] {
+        @apply   disabled:bg-gray-200 disabled:placeholder:text-white focus:ring-1 ring-blue-500
+    }
+}
+
+@layer components{
+    .btn{
+        @apply border shadow-sm px-5 py-2 rounded-md
+    }
+
+    .btn-primary{
+        @apply transition duration-100  bg-blue-400 text-white  hover:bg-blue-600 hover:scale-110
+    }
+}
