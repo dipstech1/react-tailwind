@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto my-5 h-screen'>
+      <div className=''>
           <Login />
       </div>
     </>
