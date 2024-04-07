@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { Message } from "@/shared/ui/Message";
-import Layout from "@/shared/components/Layout";
+import CenterLayout from "@/shared/components/CenterLayout";
+import Card from "@/shared/ui/Card/Card";
 
 
 interface ILoginForm {
@@ -31,8 +32,8 @@ const Login = () => {
     }
 
     return (
-        <Layout>
-            <div className=" border-2 bg-white px-8 py-4 shadow-md rounded-md w-full">
+        <CenterLayout>
+            <Card>
                 <div>
                     <form onSubmit={handleSubmit(submitData)}>
                         <div className=" my-4">
@@ -59,13 +60,16 @@ const Login = () => {
 
                         </div>
 
-                        <div>
+                        <div className="flex justify-between">
                             <Button text="Login" type="submit" btnType="primary" />
+                            <a href="">Signup</a>
                         </div>
                     </form>
+
+
                 </div>
-            </div>
-        </Layout>
+            </Card>
+        </CenterLayout>
 
     )
 }
